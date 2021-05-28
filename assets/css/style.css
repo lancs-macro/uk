@@ -458,3 +458,21 @@ hr.location {
     padding: 0;
     margin: 0;
 }
+
+.chart-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#chart-button {
+    cursor: pointer;
+    color: black;
+}
+
+#chart-button:hover {
+    color: white;
+}
+
+#chart2 {
+    display: 'none';
+}
