@@ -459,20 +459,11 @@ hr.location {
     margin: 0;
 }
 
+#chart-plotly {
+
+}
 .chart-row {
     display: flex;
     justify-content: space-between;
 }
 
-#chart-button {
-    cursor: pointer;
-    color: black;
-}
-
-#chart-button:hover {
-    color: white;
-}
-
-#chart2 {
-    display: 'none';
-}
