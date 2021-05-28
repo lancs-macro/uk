@@ -160,43 +160,21 @@
         <div class="container">
             <h1>UK Housing Observatory</h1>
             <h5 class="topics-sub">A project developed aimed at improving understanding of the UK national and regional house price dynamics.</h5>
-            <!-- <p> Dashboard for interactive </p>-->
-            <!-- <hr class="section"> -->
-            <!-- 
-            <p>
-                The UK housing observatory deals with the development of financial stability and uncertainty indicators for UK real estate markets, as well as with the construction of New House Price indices. This page is an interactive platform to access these statistics.
-            </p>
-
-            <p>
-                To find out more (further information) go to dashbard. We have developed an interactive analysis of the Financial Stability, Uncertainty in housing markets, and new Price Indices developed by us. To find out more about them click on the icon below in
-                on the dashboard tab at the top of this page.
-            </p> -->
-
+        </div>
     </section>
 
-    <!-- <section id="ad" style="background-color: rgb(238, 210, 199);">
-        <h3 class="text-center">Research and Development Internship</h3>
-        <br>
-        <div class="container">
-            <p>
-            Through a collaboration between Lancaster University Management School and Faculty for Science & Technology, Cambridge & Counties Bank are providing two internships in the area of real estate:
-        </p>
-        <ul>
-            <li>
-                <a href="https://temps.lancaster-university.co.uk/vacancies/13970/research-and-development-internship-2-real-estate-energy-efficiency-regulation-forecasting.html" style="font-weight: 700;">
-                Cambridge & Counties Bank - Real Estate Energy Efficiency Regulation Forecasting.
-                </a>   
-            </li>
-            <li>
-                <a href="https://temps.lancaster-university.co.uk/vacancies/13971/research-and-development-internship-3-economic-and-financial-forecasting.html" style="font-weight: 700;">
-                Cambridge & Counties Bank - Economic and Financial Forecasting. 
-                </a>
-            </li>
-        </ul>
-        <p>Cambridge & Counties Bank - Economic and Financial Forecasting. </p> 
-        <p>Closing date for application: 12 May 2021</p>
+    <!-- Section plotly -->
+    <section id="chart-plotly">
+        <div class="container text-center">
+            <div class="chart-row">
+                <input id="chart-button" class="btn btn-outline-secondary" type="button" value="Switch: Growth" onclick="switchPlot();" />
+            </div>
+            <iframe id = "chart" src="https://api.housing-observatory.com/visualizations/uk/rhpi" class="iframe-index"></iframe>
+            <iframe id = "chart2" src="https://api.housing-observatory.com/visualizations/uk/rhpi_yoy" class="iframe-index"></iframe>
         </div>
-    </section> -->
+    </section>
+
+
 
     <section id="topics" class="text-center bg-gray">
         <div class="container">
@@ -271,9 +249,6 @@
     </section>
 
 
-
-
-
     <!--Footer -->
     <div id="footer-placeholder"></div>
     <script>
@@ -283,9 +258,28 @@
     </script>
     <!--end of footer-->
 
-
 </body>
+
 <!-- <script src="stat-data.json"></script> -->
 <script src="./assets/js/stat.js"></script>
+
+<script language="javascript">
+    function switchPlot() {
+        if (document.getElementById('chart')) {
+                
+            if (document.getElementById('chart').style.display == 'none') {
+                document.getElementById('chart').style.display = 'block';
+                document.getElementById('chart2').style.display = 'none';
+                document.getElementById("chart-button").value = "Switch: Growth";
+
+            } else {
+                document.getElementById('chart').style.display = 'none';
+                document.getElementById('chart2').style.display = 'block';
+                document.getElementById("chart-button").value = "Switch: Level";
+            }
+        }
+    }
+</script>
+
 
 </html>
