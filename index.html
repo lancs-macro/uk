@@ -171,7 +171,7 @@
             </div>
             <div class="chart-row">
                 <iframe id = "chart" src="https://api.housing-observatory.com/visualizations/uk/rhpi" class="iframe-index"></iframe>
-                <!-- <iframe id = "chart2" src="https://api.housing-observatory.com/visualizations/uk/rhpi_yoy" class="iframe-index"></iframe>      -->
+
         </div>
     </section>
 
@@ -266,13 +266,13 @@
 
 <script language="javascript">
     function switchPlot() {
-         if ( document.getElementById("chart-button").value == "Switch: Growth") {
+         if ( document.getElementById("chart-button").value == "Switch: Level") {
             document.getElementById('chart').src = 'https://api.housing-observatory.com/visualizations/uk/rhpi';
-            document.getElementById("chart-button").value = "Switch: Level";
+            document.getElementById("chart-button").value = "Switch: Growth";
 
         } else {
            document.getElementById('chart').src = 'https://api.housing-observatory.com/visualizations/uk/rhpi_yoy';
-            document.getElementById("chart-button").value = "Switch: Growth";
+            document.getElementById("chart-button").value = "Switch: Level";
         }
         
     }

@@ -462,8 +462,23 @@ hr.location {
 #chart-plotly {
 
 }
+
+@media (max-width: 700px) {
+    #chart  {
+        height:600px;
+        overflow: hidden;
+    }
+}
 .chart-row {
     display: flex;
     justify-content: space-between;
 }
 
+#chart-button {
+    cursor: pointer;
+    color: black;
+}
+
+#chart-button:hover {
+    color: white;
+}
