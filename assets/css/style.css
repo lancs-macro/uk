@@ -443,7 +443,7 @@ hr.location {
     bottom: 0;
     right: 0;
     border: none;
-    margin: 0;
+    margin: 0; 
     padding: 0;
     overflow: hidden;
     z-index: 999999;
