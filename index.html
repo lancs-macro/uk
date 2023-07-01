@@ -29,7 +29,8 @@
     <!-- Academic icons -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
     <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <!-- Hover.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover.css">
@@ -70,14 +71,14 @@
     <!--Navigation bar-->
     <div id="nav-placeholder"></div>
     <script>
-        $(function() {
+        $(function () {
             $("#nav-placeholder").load("nav.html");
         });
     </script>
     <!--end of Navigation bar-->
 
     <!-- Start the dashboard silently to reduce the loading time -->
-    <iframe src="https://lancs-macro.shinyapps.io/uk-housing-observatory-dashboard" class="iframe-hidden" ></iframe>
+    <iframe src="https://lancs-macro.shinyapps.io/uk-housing-observatory-dashboard" class="iframe-hidden"></iframe>
 
 
     <div class="jumbotron jumbotron-index jumbotron-fluid">
@@ -85,15 +86,14 @@
         </div>
     </div>
 
-    <section id="release" class="text-center">
+    <!-- <section id="release" class="text-center">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-2 date">
                     <div class=" col-md-10" style="padding: 0;">
-                        <h3> 
+                        <h3>
                             <span id="js-release"> </span>
                         </h3>
-                        <!-- <h3 id="js-release"></h3> -->
                     </div>
                 </div>
                 <div class="col-md-5 ">
@@ -152,14 +152,15 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- Section Topics -->
     <section id="intro" class="text-center">
         <div class="container">
             <h1>UK Housing Observatory</h1>
-            <h5 class="topics-sub">A project developed aimed at improving understanding of the UK national and regional house price dynamics.</h5>
+            <h5 class="topics-sub">A project developed aimed at improving understanding of the UK national and regional
+                house price dynamics.</h5>
         </div>
     </section>
 
@@ -167,11 +168,13 @@
     <section id="chart-plotly">
         <div class="container">
             <div class="chart-row">
-                <input id="chart-button" class="btn btn-outline-secondary" type="button" value="Switch: Growth" onclick="switchPlot();" />
+                <input id="chart-button" class="btn btn-outline-secondary" type="button" value="Switch: Growth"
+                    onclick="switchPlot();" />
             </div>
             <div class="chart-row">
-                <iframe id = "chart" src="https://api.housing-observatory.com/visualizations/uk/rhpi" class="iframe-index"></iframe>
-        </div>
+                <iframe id="chart" src="https://api.housing-observatory.com/visualizations/uk/rhpi"
+                    class="iframe-index"></iframe>
+            </div>
     </section>
 
 
@@ -231,14 +234,18 @@
                         <h2>Discover & Interact</h2>
                         <!-- <h5 style="color: gray;font-weight: 600;">National and Regional Markets</h5> -->
                         <p>
-                            You will find a comprehensive set of information and interactive tools to perform real-time monitoring of real estate markets both at the national and regional level in the UK. The analyses provided relate to sustainability of house prices, affordability,
-                            and uncertainty in the housing market. In addition, we make available to you a new price index that is disaggregated up to level NUTS 3 such that you can perform your own analysis. This webpage provides an interactive platform
+                            You will find a comprehensive set of information and interactive tools to perform real-time
+                            monitoring of real estate markets both at the national and regional level in the UK. The
+                            analyses provided relate to sustainability of house prices, affordability,
+                            and uncertainty in the housing market. In addition, we make available to you a new price
+                            index that is disaggregated up to level NUTS 3 such that you can perform your own analysis.
+                            This webpage provides an interactive platform
                             to access these statistics.
                         </p>
 
                         <h5 class="text-center">
 
-                            <a href="dashboard.html" class="btn btn-outline-secondary hvr-pulse-grow"> 
+                            <a href="dashboard.html" class="btn btn-outline-secondary hvr-pulse-grow">
                                 Navigate to Dashboard to find out more !
                             </a>
                         </h5>
@@ -252,7 +259,7 @@
     <!--Footer -->
     <div id="footer-placeholder"></div>
     <script>
-        $(function() {
+        $(function () {
             $("#footer-placeholder").load("footer.html");
         });
     </script>
@@ -265,15 +272,15 @@
 
 <script language="javascript">
     function switchPlot() {
-         if ( document.getElementById("chart-button").value == "Switch: Level") {
+        if (document.getElementById("chart-button").value == "Switch: Level") {
             document.getElementById('chart').src = 'https://api.housing-observatory.com/visualizations/uk/rhpi';
             document.getElementById("chart-button").value = "Switch: Growth";
 
         } else {
-           document.getElementById('chart').src = 'https://api.housing-observatory.com/visualizations/uk/rhpi_yoy';
+            document.getElementById('chart').src = 'https://api.housing-observatory.com/visualizations/uk/rhpi_yoy';
             document.getElementById("chart-button").value = "Switch: Level";
         }
-        
+
     }
 </script>
 <!-- if (document.getElementById('chart').style.display == 'none') {
