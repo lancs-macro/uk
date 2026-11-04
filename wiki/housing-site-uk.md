@@ -23,7 +23,7 @@ Plain HTML/CSS/JS. Charts load JSON from the data API ([[projects/housing-api/ho
 Serve the folder statically. `make download_json` and `make download_png` refresh `assets/js/stat.js` and the comparison image from `lancs-macro/ukho-dashboard`.
 
 ## Deploy
-`deploy.sh` runs `netlify deploy --prod` (Netlify).
+Hosted on Cloudflare Workers static assets (`wrangler.jsonc`), built from GitHub by Workers Builds on push to `main`.
 
 ## Layout
 - Pages: `index.html`, `about.html`, `dashboard.html`, `resources.html`, `disclaimer.html`, `404.html`, `sitemap.xml`; partials `nav.html` and `footer.html`
