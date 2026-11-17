@@ -17,7 +17,7 @@ Static site of the UK Housing Observatory: house price charts, headline statisti
 Part of [[concepts/housing-observatory]]. GitHub: `lancs-macro/uk`.
 
 ## Stack
-Plain HTML/CSS/JS. Charts load JSON from the data API ([[projects/housing-api/housing-api]]): `api.housing-observatory.com/visualizations/uk/rhpi` and `rhpi_yoy`. The dashboard is embedded from Posit Connect Cloud ([[projects/ukdash/ukdash]]); a recent commit migrated it from shinyapps.io.
+Plain HTML/CSS/JS. Charts load JSON from the data API ([[projects/housing-api/housing-api]]): `api.housing-observatory.com/visualizations/uk/rhpi` and `rhpi_yoy`. The dashboard is embedded from Railway (idash-production / ukdash-production `.up.railway.app`, see [[projects/ukdash/ukdash]]); it was migrated from shinyapps.io, then Posit Connect Cloud.
 
 ## Run and test
 Serve the folder statically. `make download_json` and `make download_png` refresh `assets/js/stat.js` and the comparison image from `lancs-macro/ukho-dashboard`.
